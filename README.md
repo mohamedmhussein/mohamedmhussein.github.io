@@ -56,4 +56,4 @@ I appreciate your interest in contributing to my portfolio website. If you have 
 
 For any inquiries or feedback, please reach out to me at mohamedmhussein@protonmail.com. You can also go through my repositories to learn more about my work and projects.
 
-_Thank you for visiting my personal portfolio_
+_Thank you for visiting my personal portfolio :) _
