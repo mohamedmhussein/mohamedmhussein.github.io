@@ -1,0 +1,391 @@
+/* Defining global CSS variables */
+:root {
+    --secColor: #145C9E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+}
+
+body {
+    background: black;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ---------Title---------- */
+#titleSection {
+    width: 100%;
+    height: 120vh;
+    background-image: url(images/myImage.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    padding: 10px 5%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.myLogo {
+    width: 200px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--secColor);
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.6s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.title {
+    margin-top: 20%;
+    font-size: 30px;
+}
+
+.title h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.title h1 span {
+    color: var(--secColor);
+}
+
+/* ---------About---------- */
+#about {
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutImage {
+    flex-basis: 35%;
+}
+
+.aboutImage img {
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: transform 0.6s;
+}
+
+.aboutImage img:hover {
+    transform: scale(1.1);
+}
+
+
+
+.aboutText {
+    flex-basis: 60%;
+}
+
+.aboutText p {
+    text-align: justify;
+}
+
+.subTitle {
+    color: white;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.tabs {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tabLink {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tabLink::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background: var(--secColor);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.6s;
+}
+
+.tabLink.active::after {
+    width: 50%;
+}
+
+.tabContent ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+
+.tabContent ul li span {
+    color: var(--secColor);
+    font-size: 14px;
+}
+
+.tabContent {
+    display: none;
+}
+
+.tabContent.active {
+    display: block;
+}
+
+/* -------------Services----------------- */
+#services {
+    padding: 30px 0;
+}
+
+.servicesList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.service {
+    background: #2b2b2b;
+    padding: 30px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.6s, transform 0.6s;
+    display: flex;
+    flex-direction: column;
+}
+
+.service i {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.service h2 {
+    font-size: 30px;
+    font-weight: 500px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.service a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.service p {
+    text-align: justify;
+}
+
+.servicesList div:hover {
+    background: var(--secColor);
+    transform: translateY(-10px);
+}
+
+/* ---------------Portfolio------------------ */
+#portfolio {
+    padding: 50px 0;
+}
+
+.projectList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.project {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.6s;
+}
+
+.info {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgb(0, 0, 0, 0.6), var(--secColor));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    font-size: 14px;
+    transition: height 0.6s;
+
+}
+
+.project:hover .info {
+    height: 100%;
+}
+
+.info h3 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    /* margin-top: 20px; */
+}
+
+.info a {
+    margin-top: 20px;
+    color: var(--secColor);
+    text-decoration: none;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 25px;
+    text-align: center;
+    line-height: 60px;
+    scale: 80%;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.button {
+    margin: 50px auto;
+    display: block;
+    width: fit-content;
+    padding: 15px 50px;
+    border: 1px solid var(--secColor);
+    border-radius: 7px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.6s;
+}
+
+.button:hover {
+    background: var(--secColor);
+}
+
+/* ----------contact----------- */
+.contactInfo {
+    flex-basis: 35%;
+}
+
+.form {
+    flex-basis: 60%;
+}
+
+.contactInfo p {
+    margin-top: 30px;
+}
+
+.contactInfo p i {
+    color: var(--secColor);
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.socialMedia {
+    margin-top: 30px;
+}
+
+.socialMedia a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: rgb(226, 226, 226);
+    display: inline-block;
+    transition: transform 0.6s;
+}
+
+.socialMedia a i {
+    font-size: 30px;
+}
+
+.socialMedia a:hover {
+    color: var(--secColor);
+    transform: translateY(-5px);
+}
+
+.button.button2 {
+    display: inline-block;
+    background: var(--secColor);
+}
+
+form {
+    width: 100%;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #2b2b2b;
+    padding: 15px;
+    margin: 15px 0;
+    color: white;
+    border-radius: 6px;
+}
+
+form .button2 {
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#sent {
+    margin-top: -35px;
+    font-size: 15px;
+    color: cornsilk;
+}
