@@ -5,7 +5,7 @@ const tabLink = document.querySelectorAll(".tabLink")
 tabLink.forEach(link => link.addEventListener("click", selectAboutSubSection))
 
 // Fetching the services from the json server
-getAllServices()
+//getAllServices()
 
 //Submit form into db.json file
 document.querySelector('form').addEventListener('submit', handleSubmit)
